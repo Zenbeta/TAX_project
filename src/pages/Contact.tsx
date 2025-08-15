@@ -19,21 +19,65 @@ const Contact = () => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      service: '',
-      message: ''
-    });
-  };
+ const handleSubmit = async (e: React.FormEvent) => {
+   e.preventDefault();
+ 
+   try {
+     const plainData = JSON.stringify({
+       formType: "contactForm",
+       ...formData
+     });
+ 
+     const response = await fetch( 'https://script.google.com/macros/s/AKfycbz6CggoQmNdhL-z9HeHW2i8r1YOf6nbVscQIwFyAlbCR-Dzm69yOpPelpvzttkIm5gBXg/exec', {
+       method: 'POST',
+       headers: {
+         'Content-Type': 'text/plain;charset=utf-8'  // ✅ No preflight triggered!
+       },
+       body: plainData
+     });
+ const responseText = await response.text();
+ console.log("Raw Response:", responseText);
+ 
+ let result;
+ try {
+   result = JSON.parse(responseText);
+ } catch (err) {
+   console.error("Failed to parse JSON:", err);
+   toast({
+     title: "Error!",
+     description: "Invalid server response. Check console.",
+   });
+   return;
+ }
+ 
+ 
+     if (result.result === 'success') {
+       toast({
+         title: "Message Sent!",
+         description: "We'll get back to you within 24 hours.",
+       });
+       setFormData({
+         name: '',
+         email: '',
+         phone: '',
+         company: '',
+         service: '',
+         message: ''
+       });
+     } else {
+       toast({
+         title: "Error!",
+         description: "Failed to submit form. Try again.",
+       });
+     }
+   } catch (error) {
+     console.error('Submission Error:', error);
+     toast({
+       title: "Network Error!",
+       description: "Unable to submit form. Please try again later.",
+     });
+   }
+ };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({

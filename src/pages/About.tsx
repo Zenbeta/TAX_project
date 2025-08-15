@@ -59,7 +59,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-900 to-secondary-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,8 +67,8 @@ const About = () => {
             <div>
               <h1 className="font-heading font-bold text-5xl mb-6">About ProTax by KC & Associates</h1>
               <p className="text-xl text-gray-200 leading-relaxed">
-                Your trusted partner in financial success. We combine expertise, 
-                strategy, and personal attention to deliver exceptional results for 
+                Your trusted partner in financial success. We combine expertise,
+                strategy, and personal attention to deliver exceptional results for
                 businesses and individuals.
               </p>
             </div>
@@ -89,8 +89,8 @@ const About = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-primary-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-heading font-bold text-4xl text-primary-900 mb-6">
@@ -98,29 +98,29 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p className="text-lg text-justify">
-                  ProTax by KC & Associates was founded with a simple mission: to provide 
-                  expert financial guidance that goes beyond traditional accounting services. 
-                  We believe that every business and individual deserves access to strategic 
+                  ProTax by KC & Associates was founded with a simple mission: to provide
+                  expert financial guidance that goes beyond traditional accounting services.
+                  We believe that every business and individual deserves access to strategic
                   financial insights that drive real results.
                 </p>
-                 <p className="text-lg text-justify">
-                  Our team includes seasoned financial professionals with over a decade of 
-                  experience in tax filing, tax planning, financial forecasting, cash flow 
-                  and strategic business analysis across diverse industries. We've helped 
-                  hundreds of clients navigate complex financial challenges and achieve 
+                <p className="text-lg text-justify">
+                  Our team includes seasoned financial professionals with over a decade of
+                  experience in tax filing, tax planning, financial forecasting, cash flow
+                  and strategic business analysis across diverse industries. We've helped
+                  hundreds of clients navigate complex financial challenges and achieve
                   their goals.
                 </p>
-                 <p className="text-lg text-justify">
-                  What sets us apart is our commitment to building lasting relationships. 
-                  We take the time to understand your unique situation, challenges, and 
-                  aspirations. This personalized approach allows us to deliver tailored 
+                <p className="text-lg text-justify">
+                  What sets us apart is our commitment to building lasting relationships.
+                  We take the time to understand your unique situation, challenges, and
+                  aspirations. This personalized approach allows us to deliver tailored
                   solutions that truly make a difference.
                 </p>
               </div>
             </div>
-            <div>
+            <div className='mt-11'>
               <img
-                src="/lovable-uploads/img1.svg"
+                src="/lovable-uploads/img3.jpg"
                 alt="Professional team meeting"
                 className="rounded-lg shadow-xl"
               />
@@ -128,6 +128,77 @@ const About = () => {
           </div>
         </div>
       </section>
+      {/* Our Team */}
+<section className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="font-heading text-4xl font-bold text-primary-900 mb-12 text-center">
+      Our Team
+    </h2>
+    <div className="grid md:grid-cols-2 gap-8">
+
+      {/* Michael's Card */}
+      <div className="bg-indigo-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex items-center gap-6 group">
+        <div className="flex-shrink-0 w-28 h-28 overflow-hidden rounded-full">
+          <img
+            src="/lovable-uploads/img2.png"
+            alt="Michael – FP&A Expert"
+            className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+        <div>
+          <h3 className="text-2xl font-semibold text-primary-900 mb-2">Michael</h3>
+          <p className="text-gray-700 mb-4">
+            FP&A professional with over a decade of experience driving financial strategy across startups, growth-stage, and large enterprises in CPG, pharmaceuticals, and market research. Holds a BS in Economics from UConn.
+          </p>
+          <h4 className="font-semibold mb-2">Key Strengths:</h4>
+          <div className="flex flex-wrap gap-2 mb-4 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="bg-indigo-200 text-indigo-900 px-3 py-1 rounded-full text-sm">Financial Modeling & Forecasting</span>
+            <span className="bg-indigo-200 text-indigo-900 px-3 py-1 rounded-full text-sm">Technical Proficiency</span>
+            <span className="bg-indigo-200 text-indigo-900 px-3 py-1 rounded-full text-sm">Business Collaboration</span>
+            <span className="bg-indigo-200 text-indigo-900 px-3 py-1 rounded-full text-sm">Emerging Leadership</span>
+          </div>
+          <p className="text-gray-700">
+            His career spans hospitality, advertising, PR, and manufacturing—equipping him with adaptable, results-focused expertise.
+          </p>
+        </div>
+      </div>
+
+      {/* Nikki's Card */}
+      <div className="bg-indigo-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex items-center gap-6 group">
+        <div className="flex-shrink-0 w-28 h-28 overflow-hidden rounded-full">
+          <img
+            src="/lovable-uploads/img4.jpg"
+            alt="Nikki – Booking & Project Management Expert"
+            className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+        <div>
+          <h3 className="text-2xl font-semibold text-primary-900 mb-2">Nikki</h3>
+          <p className="text-gray-700 mb-4">
+            Nikki is a seasoned booking and project management expert with over 10 years of experience delivering exceptional customer service across diverse industries. Known for her meticulous organization and client-first approach, she ensures seamless coordination from start to finish.
+          </p>
+          <h4 className="font-semibold mb-2">What She Brings:</h4>
+          <div className="flex flex-wrap gap-2 mb-4 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="bg-indigo-200 text-indigo-900 px-3 py-1 rounded-full text-sm">Efficient Booking & Scheduling</span>
+            <span className="bg-indigo-200 text-indigo-900 px-3 py-1 rounded-full text-sm">Project Management Excellence</span>
+            <span className="bg-indigo-200 text-indigo-900 px-3 py-1 rounded-full text-sm">Client-Centric Mindset</span>
+          </div>
+          <p className="text-gray-700">
+            Whether managing high-profile events or day-to-day operations, Nikki combines sharp attention to detail with a warm, professional touch.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
 
       {/* Our Values */}
       <section className="py-20 bg-primary-50">
@@ -165,7 +236,7 @@ const About = () => {
               Why Choose ProTax by KC?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We go beyond compliance to provide the strategic insights and clarity 
+              We go beyond compliance to provide the strategic insights and clarity
               businesses need to thrive in today's competitive landscape.
             </p>
           </div>
@@ -191,9 +262,9 @@ const About = () => {
             <CardContent className="p-12 text-center">
               <h3 className="font-heading font-bold text-3xl mb-6">Our Mission</h3>
               <p className="text-xl leading-relaxed max-w-4xl mx-auto">
-                We empower organizations to maximize efficiency and achieve sustainable growth 
-                by streamlining financial processes, enhancing cross-department collaboration, 
-                and implementing financial tools. We give our clients the freedom to focus on 
+                We empower organizations to maximize efficiency and achieve sustainable growth
+                by streamlining financial processes, enhancing cross-department collaboration,
+                and implementing financial tools. We give our clients the freedom to focus on
                 what they do best—running their business—while we manage their financial complexities.
               </p>
             </CardContent>
